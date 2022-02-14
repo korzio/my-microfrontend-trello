@@ -42,10 +42,6 @@
       </ui-list>
     </ui-drawer-content>
   </ui-drawer>
-
-  <div id="content-main">
-    <p v-for="i in 36" :key="i">Content {{ i }}</p>
-  </div>
 </div>
 </template>
 
