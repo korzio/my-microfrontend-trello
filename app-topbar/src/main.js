@@ -1,10 +1,31 @@
-import { createApp } from 'vue'
+import { h, createApp } from 'vue';
+import singleSpaVue from 'single-spa-vue';
+
+import App from './App.vue';
 import BalmUI from 'balm-ui'
 import 'balm-ui-css'
-import App from './App.vue'
 
-const app = createApp(App)
+const vueLifecycles = singleSpaVue({
+  createApp,
+  appOptions: {
+    render() {
+      return h(App, {
+        // single-spa props are available on the "this" object. Forward them to your component as needed.
+        // https://single-spa.js.org/docs/building-applications#lifecyle-props
+        // if you uncomment these, remember to add matching prop definitions for them in your App.vue file.
+        /*
+        name: this.name,
+        mountParcel: this.mountParcel,
+        singleSpa: this.singleSpa,
+        */
+      });
+    },
+  },
+  handleInstance: (app) => {
+    app.use(BalmUI);
+  }
+});
 
-app.use(BalmUI)
-
-app.mount('#app')
+export const bootstrap = vueLifecycles.bootstrap;
+export const mount = vueLifecycles.mount;
+export const unmount = vueLifecycles.unmount;

@@ -1,16 +1,18 @@
 {
-  "name": "@my-microfrontend-trello/app-topbar",
+  "name": "app-topbar",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "init": "npx @vue/cli create app-topbar",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "init": "npx @vue/cli create app-topbar",
+    "serve:standalone": "vue-cli-service serve --mode standalone"
   },
   "dependencies": {
     "balm-ui": "^9.41.1",
     "core-js": "^3.6.5",
+    "single-spa-vue": "^2.1.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
@@ -20,7 +22,8 @@
     "@vue/compiler-sfc": "^3.0.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "vue-cli-plugin-single-spa": "~3.1.2"
   },
   "eslintConfig": {
     "root": true,
