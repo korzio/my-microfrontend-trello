@@ -1,9 +1,10 @@
 {
-  "name": "app-dialog",
+  "name": "dialog",
   "version": "0.0.0",
   "scripts": {
     "init": "npx @angular/cli new app-dialog",
-    "postinstall": "npx patch-package",
+    "//postinstall": "npx patch-package # does not work, please update manually",
+    "postinstall": "echo patch-package does not work, please update manually",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
