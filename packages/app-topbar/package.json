@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "init": "npx @vue/cli create app-topbar",
+    "start": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
