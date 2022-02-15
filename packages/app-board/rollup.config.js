@@ -12,8 +12,8 @@ export default {
     entryFileNames: '[hash].js',
     chunkFileNames: '[hash].js',
     assetFileNames: '[hash][extname]',
-    format: 'es',
-    dir: 'dist',
+    format: 'iife',
+    dir: 'dist'
   },
   preserveEntrySignatures: false,
 
