@@ -2,6 +2,7 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "$init": "npx lerna init",
     "init": "lerna bootstrap",
     "start": "lerna run start"
   },
