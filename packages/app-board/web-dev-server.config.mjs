@@ -20,8 +20,9 @@ export default /** @type {import('@web/dev-server').DevServerConfig} */ ({
 
   plugins: [
     {
-      name: 'my-plugin',
+      name: 'add-cors',
       transform(ctx) {
+        console.log(123)
         ctx.vary('Origin');
         ctx.set('Access-Control-Allow-Origin', '*');
         ctx.set('Access-Control-Allow-Methods', 'GET,HEAD,PUT,POST,DELETE,PATCH');

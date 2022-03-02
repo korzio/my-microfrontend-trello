@@ -12,8 +12,9 @@ export default {
     entryFileNames: '[hash].js',
     chunkFileNames: '[hash].js',
     assetFileNames: '[hash][extname]',
-    format: 'iife',
-    dir: 'dist'
+    format: 'umd',
+    dir: 'dist',
+    // file: 'result'
   },
   preserveEntrySignatures: false,
 

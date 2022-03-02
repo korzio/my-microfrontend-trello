@@ -35,11 +35,13 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js"
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "single-spa-html": "https://cdn.jsdelivr.net/npm/single-spa-html"
       }
     }
   </script>
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa-html" as="script">
 
   <!-- Add your organization's prod import map URL to this script's src  -->
   <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
@@ -50,6 +52,7 @@
       "imports": {
         "app-dialog": "//localhost:4200/main.js",
         "app-topbar": "//localhost:8080/js/app.js",
+        "app-board": "//localhost:8000/2f4a0649.js",
         "@my-microfrontend-trello/root-config": "//localhost:9000/my-microfrontend-trello-root-config.js"
       }
     }
